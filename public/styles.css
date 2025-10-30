@@ -1,0 +1,31 @@
+:root{
+  --bg:#f6f7fb;
+  --card:#fff;
+  --text:#111;
+  --accent:#4b8cff;
+}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;background:var(--bg);color:var(--text)}
+header{padding:12px;display:flex;align-items:center;justify-content:space-between}
+h1{margin:0;font-size:20px}
+.controls{display:flex;gap:8px;align-items:center}
+.controls input, .controls select{padding:6px;border-radius:6px;border:1px solid #ddd}
+#addBtn{padding:8px 12px;border-radius:8px;background:var(--accent);color:#fff;border:none}
+main{padding:12px}
+#tasksList{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.task{background:var(--card);padding:10px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.04);display:flex;justify-content:space-between;align-items:center}
+.task .left{display:flex;gap:10px;align-items:center}
+.checkbox{width:20px;height:20px;border-radius:4px;border:1px solid #ccc;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.title{font-weight:600}
+.tags{font-size:12px;color:#666}
+.small{font-size:12px;color:#666}
+.hidden{display:none}
+.modal{position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center}
+.modal-body{background:var(--card);padding:16px;border-radius:12px;width:90%;max-width:480px}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+button{cursor:pointer}
+.dark{
+  --bg:#111216;
+  --card:#141518;
+  --text:#e6e6e6;
+  --accent:#6ea6ff;
+}

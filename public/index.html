@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ToDo+ — WebApp (MVP)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Мои задачи</h1>
+      <div class="controls">
+        <input id="search" placeholder="Поиск..." />
+        <select id="filter">
+          <option value="all">Все</option>
+          <option value="active">Активные</option>
+          <option value="completed">Выполненные</option>
+          <option value="today">Сегодня</option>
+        </select>
+        <button id="themeToggle">Тема</button>
+        <button id="addBtn">+</button>
+      </div>
+    </header>
+
+    <main>
+      <ul id="tasksList"></ul>
+    </main>
+
+    <!-- Add / edit modal -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-body">
+        <h2 id="modalTitle">Добавить задачу</h2>
+        <input id="title" placeholder="Заголовок" maxlength="120"/>
+        <textarea id="description" placeholder="Описание (до 300)"></textarea>
+        <input id="tags" placeholder="#тег1,#тег2"/>
+        <label>Дата и время: <input id="due_at" type="datetime-local"/></label>
+        <label>Напоминание: <input id="reminder_at" type="datetime-local"/></label>
+        <label>Приоритет: <select id="priority"><option value="0">0</option><option value="1">1</option><option value="2">2</option></select></label>
+        <div class="modal-actions">
+          <button id="saveBtn">Сохранить</button>
+          <button id="cancelBtn">Отмена</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
